@@ -1,0 +1,20 @@
+#Crea y escribe un archivo
+def escritura(datoa, datob, datoc ):
+    # Usar una ruta raw (r'') para evitar problemas con barras invertidas
+    #Usé r'' para crear una "raw string" y evitar que Python interprete \U, \A, etc. como secuencias de escape
+    prueba = open(r'Operaciones-b-sicas-con-archivos\datos.py','w')
+    prueba.write(datoa)
+    prueba.write(datob)
+    prueba.write(datoc)
+    print("Escritura")
+    prueba.close()
+
+escritura('Hola ' ,'Mundo ', 'Bonito')
+
+#Lee el archivo
+def lectura():
+    prueba = open(r'C:\Users\ING. ANDRE\Desktop\Python Programas\datos.py','r')
+    print(prueba.read())
+    prueba.close()
+
+lectura()
